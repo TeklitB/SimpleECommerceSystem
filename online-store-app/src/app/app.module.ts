@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,7 +12,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ShippingComponent } from './components/shipping/shipping.component';
-import { CustomerParentComponent } from './components/lifecyclehooks/customer/customer-parent/customer-parent.component';
+import { CustomerParentComponent } from './components/lifecyclehooks/ngonchanges/customer/customer-parent/customer-parent.component';
+import { CustomerChildComponent } from './components/lifecyclehooks/ngonchanges/customer/customer-child/customer-child.component';
 
 @NgModule({
   declarations: [
@@ -23,11 +24,13 @@ import { CustomerParentComponent } from './components/lifecyclehooks/customer/cu
     ProductDetailsComponent,
     CartComponent,
     ShippingComponent,
-    CustomerParentComponent
+    CustomerParentComponent,
+    CustomerChildComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule
