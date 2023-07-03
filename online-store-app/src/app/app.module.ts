@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ShippingComponent } from './components/shipping/shipping.component';
+import { CustomerParentComponent } from './components/lifecyclehooks/customer/customer-parent/customer-parent.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ShippingComponent } from './components/shipping/shipping.component';
     ProductAlertsComponent,
     ProductDetailsComponent,
     CartComponent,
-    ShippingComponent
+    ShippingComponent,
+    CustomerParentComponent
   ],
   imports: [
     BrowserModule,
