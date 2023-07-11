@@ -14,6 +14,14 @@ import { CartComponent } from './components/cart/cart.component';
 import { ShippingComponent } from './components/shipping/shipping.component';
 import { CustomerParentComponent } from './components/lifecyclehooks/ngonchanges/customer/customer-parent/customer-parent.component';
 import { CustomerChildComponent } from './components/lifecyclehooks/ngonchanges/customer/customer-child/customer-child.component';
+import { CustomerParentDocheckComponent } from './components/lifecyclehooks/ngdocheck/customer/customer-parent-docheck/customer-parent-docheck.component';
+import { CustomerChildDocheckComponent } from './components/lifecyclehooks/ngdocheck/customer/customer-child-docheck/customer-child-docheck.component';
+import { HeroParentComponent } from './components/lifecyclehooks/ngonchanges/hero/hero-parent/hero-parent.component';
+import { HeroChildComponent } from './components/lifecyclehooks/ngonchanges/hero/hero-child/hero-child.component';
+import { HeroParentNgdocheckComponent } from './components/lifecyclehooks/ngdocheck/hero/hero-parent-ngdocheck/hero-parent-ngdocheck.component';
+import { HeroChildNgdocheckComponent } from './components/lifecyclehooks/ngdocheck/hero/hero-child-ngdocheck/hero-child-ngdocheck.component';
+import { KeyvaluediffersChildDocheckComponent } from './components/lifecyclehooks/ngdocheck/keyvaluediffers/child/keyvaluediffers-child-docheck/keyvaluediffers-child-docheck.component';
+import { KeyvaluediffersParentDocheckComponent } from './components/lifecyclehooks/ngdocheck/keyvaluediffers/parent/keyvaluediffers-parent-docheck/keyvaluediffers-parent-docheck.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +33,15 @@ import { CustomerChildComponent } from './components/lifecyclehooks/ngonchanges/
     CartComponent,
     ShippingComponent,
     CustomerParentComponent,
-    CustomerChildComponent
+    CustomerChildComponent,
+    HeroParentComponent,
+    HeroChildComponent,
+    CustomerParentDocheckComponent,
+    CustomerChildDocheckComponent,
+    HeroParentNgdocheckComponent,
+    HeroChildNgdocheckComponent,
+    KeyvaluediffersChildDocheckComponent,
+    KeyvaluediffersParentDocheckComponent
   ],
   imports: [
     BrowserModule,
