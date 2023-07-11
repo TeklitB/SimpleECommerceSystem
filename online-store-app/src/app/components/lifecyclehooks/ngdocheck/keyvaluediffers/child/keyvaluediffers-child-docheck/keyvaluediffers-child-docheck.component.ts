@@ -6,7 +6,7 @@ import { ChangeDetectorRef, Component, Input, KeyValueDiffers } from '@angular/c
   styleUrls: ['./keyvaluediffers-child-docheck.component.css']
 })
 export class KeyvaluediffersChildDocheckComponent {
-  @Input() data: { name: string };
+  @Input() data: { name: string } = {name: ''};
   private differ = this.differs.find({}).create();
 
   constructor(

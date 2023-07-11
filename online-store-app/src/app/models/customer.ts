@@ -1,6 +1,6 @@
 export class Customer {
-    code: number;
-    name: string;
+    code: number = 0;
+    name: string = '';
 
     constructor() {}
 }

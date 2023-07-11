@@ -7,8 +7,8 @@ import { Customer } from 'src/app/models/customer';
   styleUrls: ['./customer-child-docheck.component.css']
 })
 export class CustomerChildDocheckComponent implements OnChanges, DoCheck, OnInit {
-  @Input() message: string;
-  @Input() customer: Customer;
+  @Input() message: string = '';
+  @Input() customer: Customer = new Customer();
   changelog: string[] = [];
   oldCustomer: Customer= new Customer();
   DocheckCount = 0;
