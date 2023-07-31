@@ -25,6 +25,7 @@ export class AddProductComponent implements OnInit {
   addProduct() {
     if (this.productForm.valid) {
       this.appService.AddProduct(this.productForm.value);
+      this.productForm.reset();
     }
   }
 }
