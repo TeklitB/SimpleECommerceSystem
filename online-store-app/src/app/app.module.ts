@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +16,16 @@ import { UnderstandAsyncPipeComponent } from './components/asyncpipe/understand-
 import { AddProductComponent } from './components/asyncpipe/add-product/add-product.component';
 import { ListProductsComponent } from './components/asyncpipe/list-products/list-products.component';
 import { ProductComponent } from './components/asyncpipe/product/product.component';
+import { CustomerParentComponent } from './components/lifecyclehooks/ngonchanges/customer/customer-parent/customer-parent.component';
+import { CustomerChildComponent } from './components/lifecyclehooks/ngonchanges/customer/customer-child/customer-child.component';
+import { CustomerParentDocheckComponent } from './components/lifecyclehooks/ngdocheck/customer/customer-parent-docheck/customer-parent-docheck.component';
+import { CustomerChildDocheckComponent } from './components/lifecyclehooks/ngdocheck/customer/customer-child-docheck/customer-child-docheck.component';
+import { HeroParentComponent } from './components/lifecyclehooks/ngonchanges/hero/hero-parent/hero-parent.component';
+import { HeroChildComponent } from './components/lifecyclehooks/ngonchanges/hero/hero-child/hero-child.component';
+import { HeroParentNgdocheckComponent } from './components/lifecyclehooks/ngdocheck/hero/hero-parent-ngdocheck/hero-parent-ngdocheck.component';
+import { HeroChildNgdocheckComponent } from './components/lifecyclehooks/ngdocheck/hero/hero-child-ngdocheck/hero-child-ngdocheck.component';
+import { KeyvaluediffersChildDocheckComponent } from './components/lifecyclehooks/ngdocheck/keyvaluediffers/child/keyvaluediffers-child-docheck/keyvaluediffers-child-docheck.component';
+import { KeyvaluediffersParentDocheckComponent } from './components/lifecyclehooks/ngdocheck/keyvaluediffers/parent/keyvaluediffers-parent-docheck/keyvaluediffers-parent-docheck.component';
 
 @NgModule({
   declarations: [
@@ -29,11 +39,22 @@ import { ProductComponent } from './components/asyncpipe/product/product.compone
     UnderstandAsyncPipeComponent,
     AddProductComponent,
     ListProductsComponent,
-    ProductComponent
+    ProductComponent,
+    CustomerParentComponent,
+    CustomerChildComponent,
+    HeroParentComponent,
+    HeroChildComponent,
+    CustomerParentDocheckComponent,
+    CustomerChildDocheckComponent,
+    HeroParentNgdocheckComponent,
+    HeroChildNgdocheckComponent,
+    KeyvaluediffersChildDocheckComponent,
+    KeyvaluediffersParentDocheckComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule
