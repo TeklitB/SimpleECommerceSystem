@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { IProduct } from '../models/product';
 import { Subscription } from 'rxjs';
@@ -7,16 +7,21 @@ import { Subscription } from 'rxjs';
   selector: 'app-list-products',
   templateUrl: './list-products.component.html',
   styleUrls: ['./list-products.component.css'],
-  changeDetection: ChangeDetectionStrategy.Default
+  changeDetection: ChangeDetectionStrategy.OnPush//Default
 })
 export class ListProductsComponent implements OnInit, OnDestroy {
   products: IProduct[] = [];
   productSubscription?: Subscription;
 
-  constructor(private appService: ProductService) { }
+  constructor(private appService: ProductService,
+    private cd: ChangeDetectorRef // OnPUsh doesn't detect changes from observable. use ChangeDetectorRef 
+    ) { }
 
   productObserver = {
-    next: (data: IProduct[]) => { this.products = data; },
+    next: (data: IProduct[]) => { 
+      this.products = data; 
+      this.cd.markForCheck(); //enable the component to detect changes from observable
+    },
     error: (error: any) => { console.log(error) },
     complete: () => { console.log('product stream completed ') }
   }
