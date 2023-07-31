@@ -12,6 +12,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ShippingComponent } from './components/shipping/shipping.component';
+import { UnderstandAsyncPipeComponent } from './components/asyncpipe/understand-async-pipe/understand-async-pipe.component';
+import { AddProductComponent } from './components/asyncpipe/add-product/add-product.component';
+import { ListProductsComponent } from './components/asyncpipe/list-products/list-products.component';
+import { ProductComponent } from './components/asyncpipe/product/product.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { ShippingComponent } from './components/shipping/shipping.component';
     ProductAlertsComponent,
     ProductDetailsComponent,
     CartComponent,
-    ShippingComponent
+    ShippingComponent,
+    UnderstandAsyncPipeComponent,
+    AddProductComponent,
+    ListProductsComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
